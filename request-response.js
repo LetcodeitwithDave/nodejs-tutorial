@@ -9,16 +9,16 @@ const server = http.createServer((req,res) => {
     if( url === '/'){
     res.setHeader('Content-Type', 'text-html');
     res.write('<html>');
-    res.write('<head><title> Home page</title></head>');
-    res.write('<body> Hello from my node.js server! on home</body>');
+    res.write('<head><title>Enter message</title></head>');
+    res.write('<body> <form action="/output" method="POST">  <input type="text" name="output><button type="submit">Send</button></input> </form>  </body>');
     res.write('</html>');
     return res.end();
     }
 
     res.setHeader('Content-Type', 'text-html');
     res.write('<html>');
-    res.write('<head><title>Random path</title></head>');
-    res.write('<body> unknown page</body>');
+    res.write('<head><title>My first page</title></head>');
+    res.write('<body> Hello from my nodejs server</body>');
     res.write('</html>');
     res.end();
     
